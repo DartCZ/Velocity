@@ -10,7 +10,7 @@ plugins {
 
 application {
     mainClass.set("com.velocitypowered.proxy.Velocity")
-    applicationDefaultJvmArgs += listOf("-Dvelocity.packet-decode-logging=true");
+    applicationDefaultJvmArgs += listOf("-Dvelocity.packet-decode-logging=true")
 }
 
 tasks {
@@ -135,7 +135,6 @@ fill {
 dependencies {
     implementation(project(":velocity-api"))
     implementation(project(":velocity-native"))
-    implementation(project(":velocity-proxy-log4j2-plugin"))
 
     implementation(libs.bundles.log4j)
     implementation(libs.kyori.ansi)
@@ -172,4 +171,5 @@ dependencies {
     testImplementation(libs.mockito)
 
     annotationProcessor(libs.auto.service)
+    annotationProcessor(libs.log4j.core)
 }
