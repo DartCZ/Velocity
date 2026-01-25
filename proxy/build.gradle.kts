@@ -27,6 +27,10 @@ tasks {
     }
 
     shadowJar {
+        filesMatching("META-INF/org/apache/logging/log4j/core/config/plugins/**") {
+            duplicatesStrategy = DuplicatesStrategy.INCLUDE
+        }
+
         transform(Log4j2PluginsCacheFileTransformer::class.java)
 
         // Exclude all the collection types we don"t intend to use
