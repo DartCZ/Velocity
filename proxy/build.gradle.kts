@@ -115,7 +115,7 @@ fill {
     project("velocity")
 
     build {
-        channel = BuildChannel.STABLE
+        channel = BuildChannel.BETA
         versionFamily("3.0.0")
         version(projectVersion)
 
